@@ -56,7 +56,7 @@ isEqual(10, "Teste");
 
 // ======== Utilizando Interfaces ==============
 
-// Com interface só posso passar um Generic, que no caso é após o nome da mesma
+// Com interface posso passar Generics também, que no caso é após o nome da mesma
 interface ApiResponse<T> {
   data: T;
   success: boolean;

@@ -11,5 +11,13 @@
     "@types/node": "^24.2.1",
     "tsx": "^4.20.3",
     "typescript": "^5.9.2"
+  },
+  "imports": {
+    "#mathfuncs/*": [
+      "./build/functions/utils/math/*"
+    ],
+    "#components": [
+      "./build/components/utils/navbar/index.js"
+    ]
   }
 }

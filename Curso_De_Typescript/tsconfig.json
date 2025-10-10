@@ -10,7 +10,12 @@
     "resolveJsonModule": true,
 
     "rootDir": "src",
-    "outDir": "build"
+    "outDir": "build",
+
+    "paths": {
+      "#mathfuncs/*": ["./src/functions/utils/math/*"],
+      "#components": ["./src/components/utils/navbar/index.ts"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"]

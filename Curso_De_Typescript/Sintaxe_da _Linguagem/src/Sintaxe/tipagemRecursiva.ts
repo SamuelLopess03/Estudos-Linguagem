@@ -40,12 +40,12 @@ type NestedPartial<T> = {
 
 // Para deixar todos os campos como obrigatórios basta colocar o símbolo de subtração "-" antes do "?"
 type NestedRequired<T> = {
-  [K in keyof T]-?: T[K] extends object ? NestedPartial<T[K]> : T[K];
+  [K in keyof T]-?: T[K] extends object ? NestedRequired<T[K]> : T[K];
 };
 
 // Para deixar todos os campos como somente leitura (readonly) basta apenas colocar a palavra-chave "readonly" antes de tudo
 type NestedReadonly<T> = {
-  readonly [K in keyof T]: T[K] extends object ? NestedPartial<T[K]> : T[K];
+  readonly [K in keyof T]: T[K] extends object ? NestedReadonly<T[K]> : T[K];
 };
 
 type PartialPackageJson = NestedPartial<PackageJson>;
